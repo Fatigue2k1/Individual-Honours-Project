@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import streamlit as st
 from langchain_openai import AzureOpenAI
 from langchain_community.utilities.sql_database import SQLDatabase
-
+#
 # Load environment variables from .env file
 load_dotenv()
 
