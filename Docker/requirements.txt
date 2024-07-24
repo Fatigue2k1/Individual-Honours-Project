@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 streamlit==1.34.0
 python-dotenv==1.0.1
 langchain-community==0.2.5
+=======
+streamlit==1.34.0
+python-dotenv==1.0.1
+langchain-community==0.2.5
+>>>>>>> 46997377aa95b8f442df7f2f8fda77c976b97be0
 langchain-openai==0.1.9
