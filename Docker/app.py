@@ -116,9 +116,13 @@ def unit_test_generation():
     prompt1 = st.text_area("Enter the function you want to test:", height=100, key='ut_prompt1')
     prompt2 = st.text_area("Enter the scenarios you want to test:", height=100, key='ut_prompt2')
 
-    if st.button("Generate Unit Test", key='ut_generate_code'):
+    if st.button("Generate Unit Test Cases", key='ut_generate_code'):
         if prompt1 and prompt2:
-            code = generate_code(prompt1, prompt2, code_type="python")
+            code = generate_code(
+                f"Generate unit test cases for the following function:\n\n{prompt1}\n\nTest scenarios:\n{prompt2}", 
+                "", 
+                code_type="python"
+            )
             st.session_state.generated_unit_test_code = code  # Store generated unit test code in session state
 
     if 'generated_unit_test_code' in st.session_state:
